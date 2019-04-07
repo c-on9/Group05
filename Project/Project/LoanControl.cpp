@@ -2,6 +2,3 @@
 #include "User.h"
 #include "Equipment.h"
 #include "FileHandler.h"
-
-
-
