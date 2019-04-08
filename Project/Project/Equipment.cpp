@@ -1,50 +1,50 @@
 #include "Equipment.h"
 
-string CampEquipment::getId() const
+string Equipment::getId() const
 {
 	return id;
 }
 
-string CampEquipment::getItemId() const
+string Equipment::getItemId() const
 {
 	return itemid;
 }
 
-string CampEquipment::getItemName() const
+string Equipment::getItemName() const
 {
 	return itemname;
 }
 
-string CampEquipment::getBrand() const
+string Equipment::getBrand() const
 {
 	return brand;
 }
 
-string CampEquipment::getItemType() const
+string Equipment::getItemType() const
 {
 	return itemtype;
 }
 
-string CampEquipment::getDate() const
+string Equipment::getDate() const
 {
 	return date;
 }
 
-string CampEquipment::getCondition() const
+string Equipment::getCondition() const
 {
 	return condition;
 }
 
-string CampEquipment::getStatus() const
+string Equipment::getStatus() const
 {
 	return status;
 }
 
-void CampEquipment::setCondition()
+void Equipment::setCondition()
 {
 
 }
 
-void CampEquipment::setStatus()
+void Equipment::setStatus()
 {
 }

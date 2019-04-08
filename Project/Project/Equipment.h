@@ -1,4 +1,3 @@
-#pragma once
 #ifndef EQUIPMENT_H
 #define EQUIPMENT_H
 
@@ -7,7 +6,7 @@
 #include <sstream>
 using namespace std;
 
-class CampEquipment
+class Equipment
 {
 private:
 	string id;
@@ -34,7 +33,7 @@ public:
 
 };
 
-class Tent : CampEquipment
+class Tent : Equipment
 {
 public:
 	string tentsize;
@@ -43,7 +42,7 @@ public:
 	bool doulayer;
 	string color;
 };
-class Lantern : CampEquipment
+class Lantern : Equipment
 {
 public:
 	string lantsize;
@@ -51,7 +50,7 @@ public:
 	string fueltype;
 	
 };
-class Stove : CampEquipment
+class Stove : Equipment
 {
 public:
 	string stovetype;
