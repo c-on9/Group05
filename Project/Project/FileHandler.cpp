@@ -1,3 +1,4 @@
+//done
 #include "FileHandler.h"
 
 string readFile(string path) {
