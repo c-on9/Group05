@@ -1,2 +1,4 @@
 #ifndef ADMIN_H
-#define 
+#define ADMIN_H
+
+class Admin
