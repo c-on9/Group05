@@ -9,55 +9,77 @@ using namespace std;
 
 class Equipment {
 public:
-	string getId() const;
+    Equipment(string, string, string, string, string, string, string);
+    ~Equipment();
+    
+    virtual void outputEquipmentDetail() = 0;    // pure abstract class
 	string getItemId() const;
 	string getItemName() const;
 	string getBrand() const;
 	string getItemType() const;
-	string getDate() const;
+	string getPurchaseDate() const;
 	string getCondition() const;
 	string getStatus() const;
-	void setCondition();
-	void setStatus();
+	void setCondition(const string& _condition);
+	void setStatus(const string& _status);
 
-private:
-    string id;
+protected:
     string itemid;
     string itemname;
     string brand;
     string itemtype;
-    string date;
+    string purchaseDate;
     string condition;
     string status;
 };
 
 
-class Tent : Equipment {
+class Tent : public Equipment {
 public:
-	string tentsize;
-	string tenttype;
-	string numdoors;
-	bool doulayer;
-	string color;
+    Tent(string, string, string, string, string, string, string, string, string, string, string, string);
+    
+    string getTentSize;
+    string getTentType;
+    string getNumberOfDoors;
+    string getDoubleLayer;
+    string getColor;
+    
+    
+private:
+    string tentSize;
+    string tentType;
+    string numberOfDoors;
+    string doubleLayer;
+    string color;
 };
 
 
-class Lantern : Equipment {
+class Lantern : public Equipment {
 public:
-	string lantsize;
-	string lanttype;
-	string fueltype;
-	
+    Lantern(string, string, string, string, string, string, string, string, string, string);
+    string getLanternSize;
+    string getLanternType;
+    sting getFuelType;
+    
+    
+private:
+    string lanternSize;
+    string lanternType;
+    string fuelType;
 };
 
 
-class Stove : Equipment {
+class Stove : public Equipment {
 public:
-	string stovetype;
-	string fueltype;
+    Stove(string, string, string, string, string, string, string, string, string);
+    string getStoveType;
+    string getFuelType;
+    
+
+private:
+    string stoveType;
+    string fuelType;
 };
-
-
 
 
 #endif
