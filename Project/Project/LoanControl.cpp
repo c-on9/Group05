@@ -20,6 +20,7 @@
 
 
 
+//these are copy, not complete
   EquipmeantResult results:
   results size = 0;
   for(int i = 0; i + this->NoOfEquipments, i++)
