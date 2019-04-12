@@ -1,50 +1,115 @@
 #include "Equipment.h"
 
-string Equipment::getId() const {
-	return id;
+
+void Equipment::setCondition(const string& _condition) {
+    this->condition = _condition;
 }
 
 
-string Equipment::getItemId() const {
-	return itemid;
+void Equipment::setStatu(const string& _status) {
+    this->status = _status;
 }
 
 
-string Equipment::getItemName() const {
-	return itemname;
+bool Equipment::available() {
+    if (!getCondition().compare("good") && !getStatus().compare("in")) {
+        return true;
+    }
+    return false;
 }
 
 
-string Equipment::getBrand() const {
-	return brand;
+Equipment::Equipment(string _itemId, string _itemName, string _brand, string _itemType, string _purchaseDate, string _condition, string _status) {
+    this->itemId = _itemId ;
+    this->itemName = _itemName;
+    this->brand = _brand;
+    this->itemType = _itemType;
+    this->purchaseDate = _purchaseDate;
+    this->condition = _condition;
+    this->status = _status;
 }
 
 
-string Equipment::getItemType() const {
-	return itemtype;
-}
-
-
-string Equipment::getDate() const {
-	return date;
-}
-
-
-string Equipment::getCondition() const {
-	return condition;
-}
-
-
-string Equipment::getStatus() const {
-	return status;
-}
-
-
-void Equipment::setCondition() {
-
-}
-
-
-void Equipment::setStatus() {
+Equipment::~Equipment() {
     
 }
+
+
+Tent::getTentSize() {
+    return tentSize;
+}
+
+
+Tent::getTentType() {
+    return tentType;
+}
+
+
+Tent::getNumberOfDoors() {
+    return numberOfDoors;
+}
+
+
+Tent::getDoubleLayer() {
+    return doubleLayer;
+}
+
+
+Tent::getColor() {
+    return color;
+}
+
+
+Tent::Tent(string _itemId, string _itemName, string _brand, string _itemType, string _purchaseDate, string _condition, string _status, string _tentSize, string _tentType, string _numberOfDoors, string _doubleLayer, string _color)
+: Equipment::Equipment(itemId, itemName, brand, itemType, purchaseDate, condition, status)
+{
+    this->tentSize = _tentSize;
+    this->tentType = _tentType;
+    this->numberOfDoors = _numberOfDoors;
+    this->doubleLayer = _doubleLayer;
+    this->color = _color;
+}
+
+
+Lantern::getLanternSize() {
+    return lanternSize;
+}
+
+
+Lantern::getLanternType() {
+    return lanternType;
+}
+
+
+Lantern::getFuelType() {
+    return fuelType;
+}
+
+
+Lantern::Lantern(string _itemId, string _itemName, string _brand, string _itemType, string _purchaseDate, string _condition, string _status, string _lanternSize, string _lanternType, string _fuelType)
+: Equipment::Equipment(itemId, itemName, brand, itemType, purchaseDate, condition, status)
+{
+    this->lanternSize = _lanternSize;
+    this->lanternType = _lanternType;
+    this->fuelType = _fuelType;
+}
+
+
+Stove::getStoveType() {
+    return stoveType;
+}
+
+
+Stove::getFuelType() {
+    return fuelType;
+}
+
+
+Stove::Stove(string _itemId, string _itemName, string _brand, string _itemType, string _purchaseDate, string _condition, string _status, string _stoveType, string _fuelType)
+: Equipment::Equipment(itemId, itemName, brand, itemType, purchaseDate, condition, status)
+{
+    this->stoveType = _stoveType;
+    this->fuelType = _fuelType;
+}
+
+

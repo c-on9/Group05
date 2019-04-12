@@ -23,10 +23,10 @@ public:
     bool available;
 
 protected:
-    string itemid;
-    string itemname;
+    string itemId;
+    string itemName;
     string brand;
-    string itemtype;
+    string itemType;
     string purchaseDate;
     string condition;
     string status;
