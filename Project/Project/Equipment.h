@@ -22,6 +22,7 @@ public:
 	string getStatus() const;
 	void setCondition(const string& _condition);
 	void setStatus(const string& _status);
+    bool available;
 
 protected:
     string itemid;
