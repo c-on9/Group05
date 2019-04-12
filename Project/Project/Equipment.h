@@ -6,18 +6,8 @@
 #include <sstream>
 using namespace std;
 
-class Equipment
-{
-private:
-	string id;
-	string itemid;
-	string itemname;
-	string brand;
-	string itemtype;
-	string date;
-	string condition;
-	string status;
 
+class Equipment {
 public:
 	string getId() const;
 	string getItemId() const;
@@ -30,11 +20,19 @@ public:
 	void setCondition();
 	void setStatus();
 
-
+private:
+    string id;
+    string itemid;
+    string itemname;
+    string brand;
+    string itemtype;
+    string date;
+    string condition;
+    string status;
 };
 
-class Tent : Equipment
-{
+
+class Tent : Equipment {
 public:
 	string tentsize;
 	string tenttype;
@@ -42,16 +40,18 @@ public:
 	bool doulayer;
 	string color;
 };
-class Lantern : Equipment
-{
+
+
+class Lantern : Equipment {
 public:
 	string lantsize;
 	string lanttype;
 	string fueltype;
 	
 };
-class Stove : Equipment
-{
+
+
+class Stove : Equipment {
 public:
 	string stovetype;
 	string fueltype;
