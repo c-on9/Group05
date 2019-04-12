@@ -32,6 +32,6 @@
     if((typess**||(EquipmentList[i]->get Type()==type))&&(Admin||(EquipmentList[i]-> {
       results.List[temp]:&(*EquipmentList[i]);
       temp++;
-    }
+    }//
   return results;
 }
