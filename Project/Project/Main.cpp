@@ -7,7 +7,7 @@ int main() {
 	int size;
 	int* arr = NULL;
 	do {
-		quit = executeMenu(selectMenu(), arr, size);
+		quit = executeMenu(userMenu(), arr, size);
 	} while (!quit);
 	if (arr != NULL)
 		delete[] arr;

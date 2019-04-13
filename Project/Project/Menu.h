@@ -1,14 +1,13 @@
 #ifndef MENU_H
 #define MENU_H
 
-// not done yet
-int userMenu()
+int userMenu(bool hint)
 {
 	system("cls");
 	int choice;
 	do {
-		cout << "Select function: " << endl;
-		cout << "----------------" << endl;
+		cout << "Select action" << endl;
+		cout << "-----------------------" << endl;
 		cout << "1) Available equipments" << endl;
 		cout << "2) Loan record" << endl;
 		cout << "3) Borrow" << hint << endl;
@@ -17,7 +16,7 @@ int userMenu()
 		cout << endl;
 		cout << "Your choice: ";
 		cin >> choice;
-	} while (choice < 1 || choice > 6);
+	} while (choice < 1 || choice > 4 || choice != 9);
 	return choice;
 }
 
