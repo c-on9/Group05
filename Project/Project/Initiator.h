@@ -1,4 +1,3 @@
-#pragma once
 #ifndef INITIATOR_H
 #define INITIATOR_H
 
@@ -10,13 +9,13 @@
 #include <vector>
 
 class Initiator
-[
+{
 private:
-  std::vector<std::vector<Equipment*>> a;  
-  
+	std::vector<std::vector<Equipment*>> a;
+
 public:
-  Initiator();
-  ~Initiator();
-];
+	Initiator();
+	~Initiator();
+};
 
 #endif;

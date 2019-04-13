@@ -118,6 +118,7 @@
     <ClCompile Include="Admin.cpp" />
     <ClCompile Include="Equipment.cpp" />
     <ClCompile Include="FileHandler.cpp" />
+    <ClCompile Include="Initiator.cpp" />
     <ClCompile Include="LoanControl.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="User.cpp" />
@@ -126,6 +127,7 @@
     <ClInclude Include="Admin.h" />
     <ClInclude Include="Equipment.h" />
     <ClInclude Include="FileHandler.h" />
+    <ClInclude Include="Initiator.h" />
     <ClInclude Include="LoanControl.h" />
     <ClInclude Include="User.h" />
   </ItemGroup>

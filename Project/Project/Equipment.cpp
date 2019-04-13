@@ -1,12 +1,39 @@
 #include "Equipment.h"
 
+string Equipment::getItemId() const {
+	return itemId;
+}
+
+string Equipment::getItemName() const {
+	return itemName;
+}
+
+string Equipment::getBrand() const {
+	return brand;
+}
+
+string Equipment::getItemType() const {
+	return itemType;
+}
+
+string Equipment::getPurchaseDate() const {
+	return purchaseDate;
+}
+
+string Equipment::getCondition() const {
+	return condition;
+}
+
+string Equipment::getStatus() const {
+	return status;
+}
 
 void Equipment::setCondition(const string& _condition) {
     this->condition = _condition;
 }
 
 
-void Equipment::setStatu(const string& _status) {
+void Equipment::setStatus(const string& _status) {
     this->status = _status;
 }
 
@@ -14,8 +41,10 @@ void Equipment::setStatu(const string& _status) {
 bool Equipment::available() {
     if (!getCondition().compare("good") && !getStatus().compare("in")) {
         return true;
-    }
-    return false;
+	}
+	else {
+		return false;
+	}
 }
 
 
@@ -31,31 +60,31 @@ Equipment::Equipment(string _itemId, string _itemName, string _brand, string _it
 
 
 Equipment::~Equipment() {
-    
+
 }
 
 
-Tent::getTentSize() {
+string Tent::getTentSize() {
     return tentSize;
 }
 
 
-Tent::getTentType() {
+string Tent::getTentType() {
     return tentType;
 }
 
 
-Tent::getNumberOfDoors() {
+string Tent::getNumberOfDoors() {
     return numberOfDoors;
 }
 
 
-Tent::getDoubleLayer() {
+string Tent::getDoubleLayer() {
     return doubleLayer;
 }
 
 
-Tent::getColor() {
+string Tent::getColor() {
     return color;
 }
 
@@ -71,17 +100,17 @@ Tent::Tent(string _itemId, string _itemName, string _brand, string _itemType, st
 }
 
 
-Lantern::getLanternSize() {
+string Lantern::getLanternSize() {
     return lanternSize;
 }
 
 
-Lantern::getLanternType() {
+string Lantern::getLanternType() {
     return lanternType;
 }
 
 
-Lantern::getFuelType() {
+string Lantern::getFuelType() {
     return fuelType;
 }
 
@@ -95,12 +124,12 @@ Lantern::Lantern(string _itemId, string _itemName, string _brand, string _itemTy
 }
 
 
-Stove::getStoveType() {
+string Stove::getStoveType() {
     return stoveType;
 }
 
 
-Stove::getFuelType() {
+string Stove::getFuelType() {
     return fuelType;
 }
 

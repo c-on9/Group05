@@ -20,7 +20,7 @@ public:
 	string getStatus() const;
 	void setCondition(const string& _condition);
 	void setStatus(const string& _status);
-    bool available;
+	bool available();
 
 protected:
     string itemId;
@@ -37,11 +37,11 @@ class Tent : public Equipment {
 public:
     Tent(string, string, string, string, string, string, string, string, string, string, string, string);
     
-    string getTentSize;
-    string getTentType;
-    string getNumberOfDoors;
-    string getDoubleLayer;
-    string getColor;
+    string getTentSize();
+    string getTentType();
+    string getNumberOfDoors();
+    string getDoubleLayer();
+    string getColor();
     
     
 private:
@@ -56,9 +56,9 @@ private:
 class Lantern : public Equipment {
 public:
     Lantern(string, string, string, string, string, string, string, string, string, string);
-    string getLanternSize;
-    string getLanternType;
-    sting getFuelType;
+    string getLanternSize();
+    string getLanternType();
+    string getFuelType();
     
     
 private:
@@ -71,8 +71,8 @@ private:
 class Stove : public Equipment {
 public:
     Stove(string, string, string, string, string, string, string, string, string);
-    string getStoveType;
-    string getFuelType;
+    string getStoveType();
+    string getFuelType();
     
 
 private:
